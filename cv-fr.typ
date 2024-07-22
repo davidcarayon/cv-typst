@@ -42,9 +42,9 @@
 )
 
 #resume-item[
-  - Pilotage de pipelines de données pour de nombreux projets de recherches, allant de la collecte de la donnée au rapport final en passant par sa gestion, son nettoyage et son traitement statistique (EDA, modélisation, analyses multivariées, machine learning).
-  - Transformation de données brutes en informations utiles et solutions interactives par le biais de packages, d'applications et de documentations associées.
-  - Appui méthodologique au personnel temporaire (revues de code, stratégie d'analyse de données, statistiques) et animation de formations internes aux bonnes pratiques (Programmation, Open Source, Open Science)
+  - Administration de pipelines de données pour de nombreux projets de recherches, allant de la collecte de la donnée au rapport final en passant par sa gestion, son nettoyage et son traitement statistique (analyses exploratoires, modélisation statistique, analyses multivariées, machine learning).
+  - Transformation de données brutes en informations utiles et outils interfactifs par le biais de packages, d'applications (Shiny) et de documentations associées.
+  - Appui transversal au personnel de l'unité (revues de code, stratégie d'analyse de données, statistiques) et animation de formations internes aux bonnes pratiques (Programmation R, Science ouverte, PGD et dataverse)
 ]
 
 #resume-entry(
@@ -55,8 +55,8 @@
 )
 
 #resume-item[
-  - Manipulation de larges jeux de données (suivi de qualité écologique des cours d'eau - France entière sur 10 ans) et mise en place d'algorithmes de traitement adaptés
-  - Valorisation des résultats via des packages R (calculs d'indicateurs), des cartes interactives (Leaflet) et par la rédaction de rapports techniques, d'articles scientifiques et de présentations lors de colloques internationaux
+  - Manipulation et requêtage SQL de large bases de données (BDD Pandore) et mise en place d'algorithmes de traitement adaptés (ex: TITAN2)
+  - Valorisation des résultats via des packages R (calculs d'indicateurs), des applications Shiny et par la rédaction de rapports techniques, d'articles scientifiques et de présentations lors de colloques internationaux
 ]
 
 
@@ -73,7 +73,7 @@
 )
 #resume-skill-item(
   "Software",
-  (strong("VSCode + Quarto"), "Rstudio", "Jupyter", "Zotero", "Suite office", "QGIS"),
+  (strong("VSCode/Positron + Quarto"), "Rstudio", "DBeaver", "Jupyter", "Zotero", "Suite office", "QGIS"),
 )
 
 #resume-skill-item("Langages parlés", (strong("Anglais (bilingue)"), "Espagnol (scolaire)"))
@@ -84,12 +84,12 @@
   title: "Data.Interventions",
   location: [#globe-link("https://projet-swym.fr/data.interventions")],
   date: "2023-Present",
-  description: "ETL et Machine learning pour la prédiction des noyades",
+  description: "Pipeline de données et Machine learning pour la prédiction des noyades",
 )
 
 #resume-item[
   - Déploiement d'une solution de collecte numérique de données issues d'interventions de sauveteurs dans les Landes via Open Data Kit (ODK) dans une BDD PostgreSQL (Datacenter INRAE)
-  - Développement d'un pipeline ETL complet collectant la donnée puis la mettant en forme dans une BDD SQlite 
+  - Développement d'un pipeline CI/CD complet collectant la donnée puis la mettant en forme dans une BDD SQLite
   - Développement d'une application R Shiny pour le reporting automatisé de l'activité des sauveteurs
   - Entraînement en parallèle d'un modèle de machine learning (xGBoost) pour prédire les journées à haut risque
 ]
@@ -102,7 +102,8 @@
 )
 
 #resume-item[
-  - Développement du package R rendant la méthode opérationnelle et de l'interface web (Shiny) associée
+  - Développement et publication sur le CRAN du package R rendant la méthode opérationnelle et de l'interface web (Shiny) associée
+  - Conception et administration de BDD IDEA_v4 compilant les données de 800 diagnostics d'exploitations agricoles
 ]
 
 #resume-entry(
@@ -113,19 +114,19 @@
 )
 
 #resume-item[
-  - Conceptions d'applications Shiny avec interactions API Gitlab, manipulation de containers (Docker) via CI/CD
+  - Conceptions d'applications Shiny de saisie de données avec interactions API Gitlab, manipulation de containers (Docker) via CI/CD
 ]
 
 
 
 = Formation et Certifications
 
-#resume-entry(
-  title: "Certification Datacamp",
-  location: "En ligne",
-  date: "2024",
-  description: "Data Scientist with Python and R",
-)
+// #resume-entry(
+//   title: "Certification Datacamp",
+//   location: "En ligne",
+//   date: "2022-2024",
+//   description: "Data Scientist with Python and R",
+// )
 
 #resume-entry(
   title: "Université de Bordeaux",
