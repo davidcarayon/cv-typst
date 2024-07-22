@@ -1,5 +1,6 @@
 #import "@preview/modern-cv:0.3.1": *
 
+
 #show: resume.with(
   author: (
     firstname: "David",
@@ -8,7 +9,7 @@
     phone: "(+33) 6 64 66 90 60",
     website: "https://dcarayon.fr",
     github: "davidcarayon",
-    linkedin: "david-carayon",
+    linkedin: "15/10/1994",
     address: "8 Lotissement L'entrada 33650 CABANAC-ET-VILLAGRAINS",
     positions: (
       "Ingénieur d'études",
@@ -23,7 +24,8 @@
     ),
   ),
   date: datetime.today().display(),
-  language: "en", 
+  language: "fr", 
+  profile-picture: image("./dc_square.png"),
   colored-headers: true,
 )
 
@@ -91,7 +93,7 @@
   - Déploiement d'une solution de collecte numérique de données issues d'interventions de sauveteurs dans les Landes via Open Data Kit (ODK) dans une BDD PostgreSQL (Datacenter INRAE)
   - Développement d'un pipeline CI/CD complet collectant la donnée puis la mettant en forme dans une BDD SQLite
   - Développement d'une application R Shiny pour le reporting automatisé de l'activité des sauveteurs
-  - Entraînement en parallèle d'un modèle de machine learning (xGBoost) pour prédire les journées à haut risque
+  - Entraînement en parallèle d'un modèle de machine learning (xGBoost) pour prédire les journées à haut risque 
 ]
 
 #resume-entry(
@@ -102,8 +104,8 @@
 )
 
 #resume-item[
-  - Développement et publication sur le CRAN du package R rendant la méthode opérationnelle et de l'interface web (Shiny) associée
-  - Conception et administration de BDD IDEA_v4 compilant les données de 800 diagnostics d'exploitations agricoles
+  - Développement et publication sur le CRAN du package R rendant la méthode opérationnelle
+  - Conception et administration de la BDD IDEA4 compilant les données de 800 diagnostics d'exploitations agricoles
 ]
 
 #resume-entry(

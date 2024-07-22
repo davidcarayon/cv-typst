@@ -22,7 +22,8 @@
 // for some reason this icon doesn't work with fa-icon, so we use the local version
 #let phone-icon = box(image("assets/icons/square-phone-solid.svg"))
 #let email-icon = box(fa-icon("envelope", fill: color-darknight))
-
+#let house-icon = box(fa-house())
+#let candle-icon = box(fa-cake-candles())
 
 /// Helpers
 
@@ -152,6 +153,7 @@
   date: datetime.today().display("[month repr:long] [day], [year]"),
   accent-color: default-accent-color,
   colored-headers: true,
+  profile-picture: image,
   language: "fr",
   body,
 ) = {
@@ -183,7 +185,7 @@
         size: 8pt,
       )
       #__justify_align_3[
-        #smallcaps[Made with #fa-heart() using Quarto and Typst]
+        #smallcaps[Made using Quarto and Typst]
       ][][]
     ],
     footer-descent: 0pt,
@@ -272,12 +274,17 @@
   }
   
   let address = {
+    let separator = box(width: 5pt)
     set text(
       size: 9pt,
       weight: "bold",
     )
     align(center)[
-      #author.address
+      #house-icon
+      #box[#text(author.address)]
+      #separator
+      #candle-icon
+      #box[#text(author.linkedin)]
     ]
   }
   
@@ -315,23 +322,32 @@
             #github-icon
             #box[#link("https://github.com/" + author.github)[#author.github]]
           ]
-          #if author.linkedin != none [
-            #separator
-            #linkedin-icon
-            #box[
-              #link("https://www.linkedin.com/in/" + author.linkedin)[#author.firstname #author.lastname]
-            ]
-          ]
         ]
       ]
     ]
   }
-  
-  name
-  positions
-  address
-  contacts
-  body
+
+grid(
+      columns: (1fr, 3fr),
+      rows: (80pt),
+      align(left)[
+        #block(
+          clip: true,
+          stroke: 1pt,
+          radius: 3cm,
+          width: 3cm,
+          height: 3cm,
+          profile-picture,
+        )
+      ],
+      [
+         #name
+  #positions
+  #address
+  #contacts
+      ],
+    )
+body
 }
 
 /// The base item for resume entries. 
@@ -543,7 +559,8 @@
       fill: color-gray,
     )
     align(right)[
-      #author.address
+      #house-icon
+      #box[#text(author.address)]
     ]
   }
   
@@ -621,10 +638,11 @@
   }
   
   let letter-conclusion = {
-    align(bottom)[
+    align(bottom + right)[
       #pad(bottom: 2em)[
         #text(weight: "light")[#linguify("sincerely", from: lang_data)#sym.comma] \
-        #text(weight: "bold")[#author.firstname #author.lastname] \ \
+        #text(weight: "bold")[#author.firstname #author.lastname] \ 
+        #image("assets/signature.png", width: 30%)
         #text(weight: "light", style: "italic")[ #linguify(
             "attached",
             from: lang_data,
