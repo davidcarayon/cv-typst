@@ -111,8 +111,8 @@
 /// - secondary (content): The secondary section of the header
 #let justified-header(primary, secondary) = {
   set block(
-    above: 0.7em,
-    below: 0.7em,
+    above: 0.9em,
+    below: 0.9em,
   )
   pad[
     #__justify_align[
@@ -193,8 +193,8 @@
   
   // set paragraph spacing
   show par: set block(
-    above: 0.75em,
-    below: 0.75em,
+    above: 1.2em,
+    below: 1.2em,
   )
   set par(justify: true)
   
@@ -206,7 +206,7 @@
   show heading.where(level: 1): it => [
     #set block(
       above: 1em,
-      below: 1em,
+      below: 1.5em,
     )
     #set text(
       size: 16pt,
@@ -444,9 +444,9 @@ body
 #let coverletter(
   author: (:),
   profile-picture: image,
-  date: datetime.today().display("[month repr:long] [day], [year]"),
+  date: "Septembre 2024",
   accent-color: default-accent-color,
-  language: "en",
+  language: "fr",
   body,
 ) = {
   if type(accent-color) == "string" {
@@ -661,27 +661,27 @@ body
 /// Cover letter heading that takes in the information for the hiring company and formats it properly.
 /// - entity-info (content): The information of the hiring entity including the company name, the target (who's attention to), street address, and city
 /// - date (date): The date the letter was written (defaults to the current date)
-#let hiring-entity-info(
-  entity-info: (:),
-  date: datetime.today().display("[month repr:long] [day], [year]"),
-) = {
-  set par(leading: 1em)
-  pad(top: 1.5em, bottom: 1.5em)[
-    #__justify_align[
-      #text(weight: "bold", size: 12pt)[#entity-info.target]
-    ][
-      #text(weight: "light", style: "italic", size: 9pt)[#date]
-    ]
+// #let hiring-entity-info(
+//   entity-info: (:),
+//   date: datetime.today().display("[month repr:long] [day], [year]"),
+// ) = {
+//   set par(leading: 1em)
+//   pad(top: 1.5em, bottom: 1.5em)[
+//     #__justify_align[
+//       #text(weight: "bold", size: 12pt)[#entity-info.target]
+//     ][
+//       #text(weight: "light", style: "italic", size: 9pt)[#date]
+//     ]
     
-    #pad(top: 0.65em, bottom: 0.65em)[
-      #text(weight: "regular", fill: color-gray, size: 9pt)[
-        #smallcaps[#entity-info.name] \
-        #entity-info.street-address \
-        #entity-info.city \
-      ]
-    ]
-  ]
-}
+//     #pad(top: 0.65em, bottom: 0.65em)[
+//       #text(weight: "regular", fill: color-gray, size: 9pt)[
+//         #smallcaps[#entity-info.name] \
+//         #entity-info.street-address \
+//         #entity-info.city \
+//       ]
+//     ]
+//   ]
+// }
 
 /// Letter heading for a given job position and addressee.
 /// - job-position (string): The job position you are applying for
